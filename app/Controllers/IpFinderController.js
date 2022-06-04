@@ -1,4 +1,3 @@
-const IpFinder = require('../../Models/IpFinder');
 /**
  * @async
  * @param {object} req
@@ -7,7 +6,7 @@ const IpFinder = require('../../Models/IpFinder');
  */
 class IpFinderController {
 	static async findOrAddIp(req, res) {
-		
+
 	}
 }
 module.exports = IpFinderController;

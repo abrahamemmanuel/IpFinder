@@ -3,13 +3,9 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
 const cors = require('cors');
-const ConnectDB = require('./config/db');
 
 dotenv.config({ path: './config/config.env' });
-
-ConnectDB();
-
-const foods = require('./routes/foods');
+const locations = require('./routes/locations');
 
 const app = express();
 
@@ -20,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-app.use('/api/v1/foodspecs', foods);
+app.use('/api/v1/ipgeolocation', locations);
 
 const PORT = process.env.PORT || 3000;
 
