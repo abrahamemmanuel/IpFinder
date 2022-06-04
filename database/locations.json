@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "domain": "www.google.com",
+    "long": 9.23,
+    "lat": 9.82,
+    "geoname_id": "3435910",
+    "isActive": true
+  }
+]
