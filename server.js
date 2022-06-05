@@ -5,7 +5,7 @@ const colors = require('colors');
 const cors = require('cors');
 
 dotenv.config({ path: './config/config.env' });
-const locations = require('./routes/locations');
+const geolocations = require('./routes/geolocations');
 
 const app = express();
 
@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-app.use('/api/v1/ipgeolocation', locations);
+app.use('/api/v1/geolocations', geolocations);
 
 const PORT = process.env.PORT || 3000;
 
